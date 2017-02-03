@@ -1,18 +1,19 @@
-int gas;
-int blower;
-int fan;
-int gas_servo;
-int thresh;
-int high;
-int low;
+int gas = A0;
+int blower_p = 7;
+int blower_n = 8;
+int fan_p = 10;
+int fan_n = 11;
+int gas_servo =9 ;
+int thresh = 200;
 int fire;
-int fire_servo;
+int fire_servo = 4;
 void setup()
 {
   pinMode(gas, INPUT);
   pinMode(blower, OUTPUT);
   pinMode(fan, OUTPUT);
   pinMode(gas_off, OUTPUT);
+  Serial.begin(9600);
 }
 
 
@@ -42,3 +43,5 @@ void loop()
   }
 }
 
+
+void
